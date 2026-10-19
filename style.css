@@ -1,0 +1,317 @@
+/* Cores tiradas da logo da Piracanjuba */
+:root {
+  --azul: #025ea1;
+  --azul-escuro: #014a80;
+  --vermelho: #e4071f;
+  --laranja: #fe6d00;
+  --amarelo: #fdd500;
+  --cinza: #f4f6f8;
+  --texto: #2b2f36;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--texto);
+  background-color: #ffffff;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Ícones SVG */
+.icone {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+/* Centraliza o conteúdo */
+.conteudo {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Cabeçalho ---------- */
+.cabecalho {
+  background-color: #ffffff;
+  padding: 16px 0;
+}
+
+.cabecalho-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo img {
+  height: 100px;
+  width: auto;
+  display: block;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.info .icone {
+  width: 36px;
+  height: 36px;
+  padding: 7px;
+  border-radius: 50%;
+  background-color: var(--cinza);
+  color: var(--laranja);
+}
+
+.info strong {
+  display: block;
+  color: var(--azul);
+  font-size: 18px;
+}
+
+.info span {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* ---------- Menu ---------- */
+.menu {
+  background-color: var(--azul);
+  border-bottom: 4px solid var(--amarelo);
+}
+
+.menu ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 24px;
+  color: #ffffff;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.menu a:hover {
+  background-color: var(--azul-escuro);
+}
+
+/* ---------- Corpo ---------- */
+.corpo {
+  padding: 60px 0;
+  background-color: var(--cinza);
+}
+
+.corpo-grid {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.imagem {
+  flex: 0 0 320px;
+}
+
+.imagem svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 28px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.texto h1 {
+  color: var(--azul);
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+.texto p {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.botao {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 12px 28px;
+  background-color: var(--laranja);
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: background-color 0.2s;
+}
+
+.botao:hover {
+  background-color: var(--vermelho);
+}
+
+/* ---------- Rodapé ---------- */
+.rodape {
+  background-color: var(--azul);
+  color: #ffffff;
+  padding: 40px 0 20px;
+}
+
+.rodape-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.rodape h2 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: var(--amarelo);
+}
+
+.rodape li {
+  margin-bottom: 8px;
+}
+
+.rodape a {
+  color: #ffffff;
+}
+
+.rodape a:hover {
+  color: var(--amarelo);
+}
+
+.rodape p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.redes {
+  display: flex;
+  gap: 12px;
+}
+
+.redes a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.15);
+  transition: background-color 0.2s;
+}
+
+.redes a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.rodape .copy {
+  justify-content: center;
+  margin-top: 32px;
+  padding: 16px 24px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 13px;
+  text-align: center;
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 992px) {
+  /* fontes menores */
+  .texto h1 {
+    font-size: 30px;
+  }
+
+  .texto p {
+    font-size: 16px;
+  }
+
+  .info strong {
+    font-size: 15px;
+  }
+
+  .info span {
+    font-size: 12px;
+  }
+
+  .logo img {
+    height: 80px;
+  }
+
+  /* texto centralizado e imagem abaixo do texto */
+  .corpo-grid {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 32px;
+  }
+
+  .imagem {
+    flex: none;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .rodape-grid {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rodape p,
+  .redes {
+    justify-content: center;
+  }
+}
+
+/* ---------- Celular ---------- */
+@media (max-width: 576px) {
+  /* logo menor e sem as informações 1 e 2 */
+  .logo img {
+    height: 55px;
+  }
+
+  .info1,
+  .info2 {
+    display: none;
+  }
+
+  .cabecalho-grid {
+    justify-content: center;
+  }
+
+  .menu a {
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+
+  .corpo {
+    padding: 40px 0;
+  }
+
+  .texto h1 {
+    font-size: 26px;
+  }
+}

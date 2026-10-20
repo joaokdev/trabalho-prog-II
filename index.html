@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Piracanjuba - Sabor que faz bem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Ícones usados no site (SVG) -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
     <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
@@ -20,9 +22,11 @@
     <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37zM17.5 6.5h.01"/></symbol>
     <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
     <symbol id="i-youtube" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><path d="M9.75 15.02l5.75-3.27-5.75-3.27z"/></symbol>
+    <symbol id="i-droplet" viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></symbol>
   </svg>
 
-  <!-- Cabeçalho: logo + informação 1 + informação 2 -->
   <header class="cabecalho">
     <div class="conteudo cabecalho-grid">
       <a href="#" class="logo"><img src="imagens/logo.png" alt="Logo da Piracanjuba"></a>
@@ -45,7 +49,6 @@
     </div>
   </header>
 
-  <!-- Menu -->
   <nav class="menu">
     <ul>
       <li><a href="#"><svg class="icone"><use href="#i-home"/></svg>Início</a></li>
@@ -55,28 +58,11 @@
     </ul>
   </nav>
 
-  <!-- Corpo: imagem + texto -->
   <main class="corpo">
     <div class="conteudo corpo-grid">
 
       <div class="imagem">
-        <svg viewBox="0 0 300 300" role="img" aria-label="Ilustração de uma caixa e um copo de leite">
-          <defs>
-            <linearGradient id="fundo" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#fdd500"/>
-              <stop offset="1" stop-color="#fe6d00"/>
-            </linearGradient>
-          </defs>
-          <rect width="300" height="300" rx="28" fill="url(#fundo)"/>
-          <!-- caixa de leite -->
-          <polygon points="80,105 130,75 180,105" fill="#ffffff"/>
-          <rect x="80" y="105" width="100" height="150" fill="#ffffff"/>
-          <rect x="80" y="150" width="100" height="40" fill="#025ea1"/>
-          <text x="130" y="178" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff">LEITE</text>
-          <!-- copo de leite -->
-          <path d="M190 150 H260 L252 255 H198 Z" fill="#ffffff" fill-opacity="0.6"/>
-          <path d="M193 175 H257 L252 255 H198 Z" fill="#ffffff"/>
-        </svg>
+        <img src="imagens/destaque.png" alt="Mulher sorrindo com a logo de 70 anos da Piracanjuba">
       </div>
 
       <div class="texto">
@@ -89,7 +75,41 @@
     </div>
   </main>
 
-  <!-- Rodapé: links úteis + fale conosco + redes sociais -->
+  <section class="destaques">
+    <div class="conteudo">
+      <h2 class="destaques-titulo">Nossos destaques</h2>
+      <div class="destaques-grid">
+
+        <article class="card">
+          <svg class="icone card-icone"><use href="#i-droplet"/></svg>
+          <h3>Produtos variados</h3>
+          <p>Leite, iogurtes, queijos, manteiga e outros derivados para todos os momentos do dia.</p>
+        </article>
+
+        <article class="card">
+          <svg class="icone card-icone"><use href="#i-check"/></svg>
+          <h3>Qualidade</h3>
+          <p>Cuidado em cada etapa, do campo até a mesa, para entregar um produto em que a família pode confiar.</p>
+        </article>
+
+        <article class="card">
+          <svg class="icone card-icone"><use href="#i-truck"/></svg>
+          <h3>Perto de você</h3>
+          <p>Uma marca presente em mercados de todo o Brasil, fácil de encontrar na hora da compra.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="chamada">
+    <div class="conteudo chamada-caixa">
+      <h2>Quer conhecer melhor a Piracanjuba?</h2>
+      <p>Veja os produtos, descubra novidades ou fale com a gente. Será um prazer atender você.</p>
+      <a href="#" class="botao-chamada">Fale conosco</a>
+    </div>
+  </section>
+
   <footer class="rodape">
     <div class="conteudo rodape-grid">
 

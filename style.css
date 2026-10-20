@@ -1,12 +1,16 @@
-/* Cores tiradas da logo da Piracanjuba */
 :root {
   --azul: #025ea1;
-  --azul-escuro: #014a80;
+  --azul-escuro: #013d6b;
   --vermelho: #e4071f;
   --laranja: #fe6d00;
+  --laranja-claro: #f59d26;
   --amarelo: #fdd500;
-  --cinza: #f4f6f8;
-  --texto: #2b2f36;
+  --creme: #fbf6ec;
+  --linha: #e3dccd;
+  --texto: #1f2933;
+  --cinza: #5f6b7a;
+  --fonte-titulo: "Bricolage Grotesque", Arial, sans-serif;
+  --fonte-texto: "Public Sans", Arial, sans-serif;
 }
 
 * {
@@ -16,7 +20,7 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--fonte-texto);
   color: var(--texto);
   background-color: #ffffff;
   line-height: 1.6;
@@ -30,7 +34,13 @@ ul {
   list-style: none;
 }
 
-/* Ícones SVG */
+h1,
+h2,
+h3 {
+  font-family: var(--fonte-titulo);
+  line-height: 1.15;
+}
+
 .icone {
   width: 22px;
   height: 22px;
@@ -42,7 +52,6 @@ ul {
   flex-shrink: 0;
 }
 
-/* Centraliza o conteúdo */
 .conteudo {
   width: 100%;
   max-width: 1100px;
@@ -50,10 +59,11 @@ ul {
   padding: 0 24px;
 }
 
-/* ---------- Cabeçalho ---------- */
 .cabecalho {
   background-color: #ffffff;
-  padding: 16px 0;
+  padding: 18px 0;
+  border-top: 8px solid;
+  border-image: linear-gradient(90deg, var(--vermelho) 25%, var(--laranja) 25% 50%, var(--laranja-claro) 50% 75%, var(--amarelo) 75%) 1;
 }
 
 .cabecalho-grid {
@@ -64,41 +74,39 @@ ul {
 }
 
 .logo img {
-  height: 100px;
-  width: auto;
   display: block;
+  height: 96px;
+  width: auto;
 }
 
 .info {
   display: flex;
   align-items: center;
   gap: 12px;
+  padding-left: 16px;
+  border-left: 3px solid var(--laranja-claro);
 }
 
 .info .icone {
-  width: 36px;
-  height: 36px;
-  padding: 7px;
-  border-radius: 50%;
-  background-color: var(--cinza);
-  color: var(--laranja);
+  width: 30px;
+  height: 30px;
+  color: var(--azul);
 }
 
 .info strong {
   display: block;
-  color: var(--azul);
+  font-family: var(--fonte-titulo);
   font-size: 18px;
+  color: var(--azul);
 }
 
 .info span {
   font-size: 14px;
-  color: #6b7280;
+  color: var(--cinza);
 }
 
-/* ---------- Menu ---------- */
 .menu {
   background-color: var(--azul);
-  border-bottom: 4px solid var(--amarelo);
 }
 
 .menu ul {
@@ -111,71 +119,235 @@ ul {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 14px 24px;
+  padding: 16px 26px 12px;
+  border-bottom: 4px solid transparent;
   color: #ffffff;
-  font-weight: bold;
-  transition: background-color 0.2s;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
-.menu a:hover {
+.menu a:hover,
+.menu li:first-child a {
   background-color: var(--azul-escuro);
+  border-bottom-color: var(--amarelo);
 }
 
-/* ---------- Corpo ---------- */
 .corpo {
-  padding: 60px 0;
-  background-color: var(--cinza);
+  padding: 72px 0;
+  background-color: var(--creme);
 }
 
 .corpo-grid {
   display: flex;
   align-items: center;
-  gap: 48px;
+  gap: 56px;
 }
 
 .imagem {
-  flex: 0 0 320px;
+  flex: 0 0 340px;
 }
 
-.imagem svg {
+.imagem img {
+  display: block;
   width: 100%;
   height: auto;
-  display: block;
-  border-radius: 28px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  mix-blend-mode: multiply;
 }
 
 .texto h1 {
+  margin-bottom: 28px;
+  font-size: 52px;
+  font-weight: 800;
   color: var(--azul);
-  font-size: 40px;
-  margin-bottom: 16px;
+}
+
+.texto h1::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 6px;
+  margin-top: 16px;
+  background-color: var(--vermelho);
 }
 
 .texto p {
-  font-size: 18px;
+  max-width: 520px;
   margin-bottom: 16px;
+  font-size: 18px;
 }
 
 .botao {
   display: inline-block;
-  margin-top: 8px;
-  padding: 12px 28px;
-  background-color: var(--laranja);
+  margin-top: 12px;
+  padding: 14px 28px;
+  background-color: var(--azul);
   color: #ffffff;
-  font-weight: bold;
-  border-radius: 30px;
-  transition: background-color 0.2s;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.botao::after {
+  content: " \2192";
 }
 
 .botao:hover {
-  background-color: var(--vermelho);
+  background-color: var(--azul-escuro);
 }
 
-/* ---------- Rodapé ---------- */
-.rodape {
+.destaques {
+  padding: 72px 0;
+  background-color: #ffffff;
+}
+
+.destaques-titulo {
+  margin-bottom: 40px;
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--azul);
+}
+
+.destaques-titulo::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 6px;
+  margin-top: 14px;
+  background-color: var(--laranja);
+}
+
+.destaques-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  counter-reset: numero;
+}
+
+.card {
+  position: relative;
+  padding: 36px 28px 32px;
+  background-color: var(--creme);
+  border: 1px solid var(--linha);
+  border-top: 8px solid var(--vermelho);
+  counter-increment: numero;
+}
+
+.card:nth-child(2) {
+  border-top-color: var(--laranja);
+}
+
+.card:nth-child(3) {
+  border-top-color: var(--amarelo);
+}
+
+.card::before {
+  content: "0" counter(numero);
+  position: absolute;
+  top: 14px;
+  right: 22px;
+  font-family: var(--fonte-titulo);
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--linha);
+}
+
+.card-icone {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 18px;
+  color: var(--azul);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: var(--azul);
+}
+
+.card p {
+  font-size: 16px;
+  color: var(--cinza);
+}
+
+.chamada {
+  position: relative;
+  overflow: hidden;
+  padding: 80px 0;
+  background-color: var(--amarelo);
+  color: var(--azul-escuro);
+}
+
+.chamada::before,
+.chamada::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: transparent;
+}
+
+.chamada::before {
+  top: -120px;
+  right: -90px;
+  width: 380px;
+  height: 380px;
+  border-width: 38px;
+  border-top-color: var(--vermelho);
+  border-left-color: var(--vermelho);
+  transform: rotate(15deg);
+}
+
+.chamada::after {
+  top: -30px;
+  right: 50px;
+  width: 240px;
+  height: 240px;
+  border-width: 28px;
+  border-bottom-color: var(--laranja);
+  border-right-color: var(--laranja);
+}
+
+.chamada-caixa {
+  position: relative;
+  z-index: 1;
+}
+
+.chamada h2 {
+  max-width: 560px;
+  margin-bottom: 16px;
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.chamada p {
+  max-width: 520px;
+  margin-bottom: 28px;
+  font-size: 18px;
+}
+
+.botao-chamada {
+  display: inline-block;
+  padding: 14px 32px;
   background-color: var(--azul);
   color: #ffffff;
-  padding: 40px 0 20px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.botao-chamada:hover {
+  background-color: var(--azul-escuro);
+}
+
+.rodape {
+  padding: 48px 0 20px;
+  background-color: var(--azul-escuro);
+  color: #ffffff;
+  border-top: 8px solid;
+  border-image: linear-gradient(90deg, var(--vermelho) 25%, var(--laranja) 25% 50%, var(--laranja-claro) 50% 75%, var(--amarelo) 75%) 1;
 }
 
 .rodape-grid {
@@ -185,8 +357,10 @@ ul {
 }
 
 .rodape h2 {
-  font-size: 20px;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--amarelo);
 }
 
@@ -211,7 +385,7 @@ ul {
 
 .redes {
   display: flex;
-  gap: 12px;
+  gap: 10px;
 }
 
 .redes a {
@@ -220,13 +394,13 @@ ul {
   justify-content: center;
   width: 44px;
   height: 44px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.15);
-  transition: background-color 0.2s;
+  border: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 .redes a:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: var(--amarelo);
+  border-color: var(--amarelo);
+  color: var(--azul-escuro);
 }
 
 .rodape .copy {
@@ -238,15 +412,9 @@ ul {
   text-align: center;
 }
 
-/* ---------- Tablet ---------- */
 @media (max-width: 992px) {
-  /* fontes menores */
-  .texto h1 {
-    font-size: 30px;
-  }
-
-  .texto p {
-    font-size: 16px;
+  .logo img {
+    height: 80px;
   }
 
   .info strong {
@@ -257,27 +425,85 @@ ul {
     font-size: 12px;
   }
 
-  .logo img {
-    height: 80px;
-  }
-
-  /* texto centralizado e imagem abaixo do texto */
   .corpo-grid {
     flex-direction: column-reverse;
-    text-align: center;
     gap: 32px;
+    text-align: center;
   }
 
   .imagem {
     flex: none;
     width: 100%;
-    max-width: 280px;
+    max-width: 300px;
+  }
+
+  .texto h1 {
+    font-size: 36px;
+  }
+
+  .texto h1::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .texto p {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+  }
+
+  .destaques-titulo {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .destaques-titulo::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .destaques-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .card {
+    text-align: center;
+  }
+
+  .chamada {
+    text-align: center;
+  }
+
+  .chamada::before {
+    top: -150px;
+    right: -120px;
+    width: 300px;
+    height: 300px;
+    border-width: 30px;
+  }
+
+  .chamada::after {
+    display: none;
+  }
+
+  .chamada h2 {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+  }
+
+  .chamada p {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
   }
 
   .rodape-grid {
-    text-align: center;
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
 
   .rodape p,
@@ -286,11 +512,9 @@ ul {
   }
 }
 
-/* ---------- Celular ---------- */
 @media (max-width: 576px) {
-  /* logo menor e sem as informações 1 e 2 */
   .logo img {
-    height: 55px;
+    height: 56px;
   }
 
   .info1,
@@ -303,15 +527,172 @@ ul {
   }
 
   .menu a {
-    padding: 12px 14px;
-    font-size: 14px;
+    padding: 12px 14px 8px;
+    font-size: 12px;
   }
 
-  .corpo {
-    padding: 40px 0;
+  .corpo,
+  .destaques,
+  .chamada {
+    padding: 44px 0;
+  }
+
+  .texto h1 {
+    font-size: 30px;
+  }
+
+  .destaques-titulo {
+    font-size: 24px;
+  }
+
+  .chamada::before {
+    display: none;
+  }
+
+  .chamada h2 {
+    font-size: 26px;
+  }
+
+  .botao-chamada {
+    display: block;
+    padding: 14px 20px;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .cabecalho-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px 24px;
+  }
+
+  .info {
+    padding-left: 12px;
+  }
+
+  .menu a {
+    padding: 14px 16px 10px;
+  }
+
+  .rodape-grid {
+    gap: 28px;
+  }
+}
+
+@media (max-width: 576px) {
+  .conteudo {
+    padding: 0 20px;
+  }
+
+  .cabecalho {
+    padding: 14px 0;
+  }
+
+  .menu ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .menu a {
+    justify-content: center;
+    min-height: 48px;
+    padding: 14px 8px 10px;
+  }
+
+  .corpo-grid {
+    gap: 24px;
+  }
+
+  .imagem {
+    max-width: 240px;
+  }
+
+  .texto h1 {
+    margin-bottom: 20px;
+  }
+
+  .texto p {
+    font-size: 15px;
+  }
+
+  .botao {
+    display: block;
+    text-align: center;
+  }
+
+  .destaques-titulo {
+    margin-bottom: 28px;
+  }
+
+  .destaques-grid {
+    max-width: none;
+    gap: 16px;
+  }
+
+  .card {
+    padding: 28px 20px 24px;
+  }
+
+  .card::before {
+    font-size: 44px;
+    top: 10px;
+    right: 16px;
+  }
+
+  .card h3 {
+    font-size: 21px;
+  }
+
+  .card p {
+    font-size: 15px;
+  }
+
+  .chamada p {
+    font-size: 15px;
+  }
+
+  .rodape {
+    padding: 36px 0 16px;
+  }
+
+  .rodape li {
+    margin-bottom: 4px;
+  }
+
+  .rodape li a {
+    display: inline-block;
+    padding: 6px 0;
+  }
+
+  .rodape .copy {
+    margin-top: 24px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 380px) {
+  .conteudo {
+    padding: 0 16px;
+  }
+
+  .logo img {
+    height: 48px;
+  }
+
+  .menu a {
+    font-size: 11px;
+    gap: 6px;
   }
 
   .texto h1 {
     font-size: 26px;
+  }
+
+  .chamada h2 {
+    font-size: 23px;
   }
 }

@@ -271,6 +271,7 @@ h3 {
   font-size: 16px;
   color: var(--cinza);
 }
+<<<<<<< HEAD
 
 /* Perguntas frequentes */
 .faq {
@@ -278,6 +279,21 @@ h3 {
   background-color: var(--creme);
 }
 
+=======
+.cta {
+  position: relative;
+  overflow: hidden;
+  padding: 88px 0;
+  background-color: var(--azul);
+  color: #ffffff;
+}
+
+.faq {
+  padding: 72px 0;
+  background-color: var(--creme);
+}
+
+>>>>>>> 0f58956be807e24dc494c33f6392276318071a99
 .faq-titulo {
   margin-bottom: 40px;
   font-size: 36px;
@@ -331,6 +347,7 @@ h3 {
   cursor: pointer;
   list-style: none;
 }
+<<<<<<< HEAD
 
 /* some com a setinha padrão do navegador */
 .faq summary::-webkit-details-marker {
@@ -338,6 +355,11 @@ h3 {
 }
 
 /* sinal de + que vira - quando abre */
+=======
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+>>>>>>> 0f58956be807e24dc494c33f6392276318071a99
 .faq summary::after {
   content: "+";
   flex-shrink: 0;
@@ -421,8 +443,11 @@ h3 {
   background-color: var(--azul);
   color: #ffffff;
 }
+<<<<<<< HEAD
 
 /* arcos que lembram o sol da marca */
+=======
+>>>>>>> 0f58956be807e24dc494c33f6392276318071a99
 .cta::before,
 .cta::after {
   content: "";

@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Página sobre a Piracanjuba, marca brasileira de laticínios. Trabalho de faculdade feito com HTML e CSS.">
   <title>Piracanjuba - Sabor que faz bem</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,6 +11,9 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Atalho para quem navega pelo teclado -->
+  <a href="#conteudo" class="pular-conteudo">Pular para o conteúdo</a>
 
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
@@ -27,20 +31,20 @@
     <symbol id="i-truck" viewBox="0 0 24 24"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></symbol>
   </svg>
 
-  <header class="cabecalho">
+  <header class="cabecalho" id="inicio">
     <div class="conteudo cabecalho-grid">
-      <a href="#" class="logo"><img src="imagens/logo.png" alt="Logo da Piracanjuba"></a>
+      <a href="#inicio" class="logo"><img src="imagens/logo.png" alt="Logo da Piracanjuba"></a>
 
       <div class="info info1">
-        <svg class="icone"><use href="#i-calendar"/></svg>
+        <svg class="icone" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg>
         <div>
-          <strong>Desde 1960</strong>
+          <strong>Desde <time datetime="1960">1960</time></strong>
           <span>Tradição em laticínios</span>
         </div>
       </div>
 
       <div class="info info2">
-        <svg class="icone"><use href="#i-pin"/></svg>
+        <svg class="icone" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg>
         <div>
           <strong>Goiás - Brasil</strong>
           <span>Presente em todo o país</span>
@@ -49,139 +53,223 @@
     </div>
   </header>
 
-  <nav class="menu">
+  <nav class="menu" aria-label="Menu principal">
     <ul>
-      <li><a href="#"><svg class="icone"><use href="#i-home"/></svg>Início</a></li>
-      <li><a href="#"><svg class="icone"><use href="#i-info"/></svg>Sobre</a></li>
-      <li><a href="#"><svg class="icone"><use href="#i-box"/></svg>Produtos</a></li>
-      <li><a href="#"><svg class="icone"><use href="#i-mail"/></svg>Contato</a></li>
+      <li><a href="#inicio" aria-current="page"><svg class="icone" aria-hidden="true" focusable="false"><use href="#i-home"/></svg>Início</a></li>
+      <li><a href="#sobre"><svg class="icone" aria-hidden="true" focusable="false"><use href="#i-info"/></svg>Sobre</a></li>
+      <li><a href="#produtos"><svg class="icone" aria-hidden="true" focusable="false"><use href="#i-box"/></svg>Produtos</a></li>
+      <li><a href="#contato"><svg class="icone" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg>Contato</a></li>
     </ul>
   </nav>
 
-  <main class="corpo">
-    <div class="conteudo corpo-grid">
+  <main id="conteudo">
 
-      <div class="imagem">
-        <img src="imagens/destaque.png" alt="Mulher sorrindo com a logo de 70 anos da Piracanjuba">
+    <!-- Apresentação -->
+    <section class="corpo" id="sobre" aria-labelledby="titulo-sobre">
+      <div class="conteudo corpo-grid">
+
+        <div class="imagem">
+          <img src="imagens/destaque.png" alt="Mulher sorrindo com a logo de 70 anos da Piracanjuba">
+        </div>
+
+        <div class="texto">
+          <h1 id="titulo-sobre">Sabor que faz bem</h1>
+          <p>A Piracanjuba é uma marca brasileira de laticínios conhecida pela qualidade dos seus produtos. Ela chega à mesa de milhões de famílias com leite, iogurtes, queijos, manteigas e muito mais.</p>
+          <p>Este site foi criado como trabalho de faculdade para praticar HTML e CSS, e usa a Piracanjuba como tema.</p>
+          <a href="#produtos" class="botao">Conheça os produtos</a>
+        </div>
+
       </div>
+    </section>
 
-      <div class="texto">
-        <h1>Sabor que faz bem</h1>
-        <p>A Piracanjuba é uma marca brasileira de laticínios conhecida pela qualidade dos seus produtos. Ela chega à mesa de milhões de famílias com leite, iogurtes, queijos, manteigas e muito mais.</p>
-        <p>Este site foi criado como trabalho de faculdade para praticar HTML e CSS, e usa a Piracanjuba como tema.</p>
-        <a href="#" class="botao">Conheça os produtos</a>
+    <!-- Destaques -->
+    <section class="destaques" id="produtos" aria-labelledby="titulo-destaques">
+      <div class="conteudo">
+        <h2 class="destaques-titulo" id="titulo-destaques">Nossos destaques</h2>
+        <div class="destaques-grid">
+
+          <article class="card">
+            <svg class="icone card-icone" aria-hidden="true" focusable="false"><use href="#i-droplet"/></svg>
+            <h3>Produtos variados</h3>
+            <p>Leite, iogurtes, queijos, manteiga e outros derivados para todos os momentos do dia.</p>
+          </article>
+
+          <article class="card">
+            <svg class="icone card-icone" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
+            <h3>Qualidade</h3>
+            <p>Cuidado em cada etapa, do campo até a mesa, para entregar um produto em que a família pode confiar.</p>
+          </article>
+
+          <article class="card">
+            <svg class="icone card-icone" aria-hidden="true" focusable="false"><use href="#i-truck"/></svg>
+            <h3>Perto de você</h3>
+            <p>Uma marca presente em mercados de todo o Brasil, fácil de encontrar na hora da compra.</p>
+          </article>
+
+        </div>
       </div>
+    </section>
 
-    </div>
+    <!-- Perguntas frequentes -->
+    <section class="faq" id="perguntas" aria-labelledby="faq-titulo">
+      <div class="conteudo">
+        <h2 class="faq-titulo" id="faq-titulo">Perguntas frequentes</h2>
+
+        <div class="faq-lista">
+
+          <details>
+            <summary>Desde quando a Piracanjuba existe?</summary>
+            <p>A marca existe desde 1960 e tem tradição em laticínios. Hoje está presente em todo o país.</p>
+          </details>
+
+          <details>
+            <summary>Quais produtos a Piracanjuba oferece?</summary>
+            <p>A marca trabalha com leite, iogurtes, queijos, manteigas e outros derivados, para todos os momentos do dia.</p>
+          </details>
+
+          <details>
+            <summary>Onde fica a sede da empresa?</summary>
+            <p>A sede fica em Goiânia - GO, na Rua Bom Jardim, 201, Residencial Alphaville Flamboyant. Veja o mapa na seção de localização desta página.</p>
+          </details>
+
+          <details>
+            <summary>Como posso falar com a Piracanjuba?</summary>
+            <p>Você pode ligar para o telefone <a href="tel:08007221718">0800 722 1718</a>.</p>
+          </details>
+
+          <details>
+            <summary>Este é o site oficial da marca?</summary>
+            <p>Não. Esta página foi feita como trabalho de faculdade, para praticar HTML e CSS, e usa a Piracanjuba apenas como tema.</p>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Chamada para ação -->
+    <section class="cta" aria-labelledby="cta-titulo">
+      <div class="conteudo cta-grid">
+
+        <div class="cta-texto">
+          <span class="cta-selo">Sabor que faz bem</span>
+          <h2 id="cta-titulo">Leve o sabor da Piracanjuba para a sua mesa hoje</h2>
+          <p>Leite, iogurtes, queijos e manteigas feitos com cuidado para a sua família. Escolha o seu favorito e encontre no mercado mais perto de você.</p>
+
+          <div class="cta-botoes">
+            <a href="#produtos" class="cta-botao">Quero conhecer os produtos</a>
+            <a href="tel:08007221718" class="cta-ligue">
+              <svg class="icone" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>
+              Prefere ligar? 0800 722 1718
+            </a>
+          </div>
+        </div>
+
+        <ul class="cta-card" aria-label="Motivos para escolher a Piracanjuba">
+          <li>
+            <svg class="icone" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
+            <div>
+              <strong>Qualidade de confiança</strong>
+              <span>Do campo até a mesa da sua família</span>
+            </div>
+          </li>
+          <li>
+            <svg class="icone" aria-hidden="true" focusable="false"><use href="#i-droplet"/></svg>
+            <div>
+              <strong>Para todos os momentos</strong>
+              <span>Do café da manhã ao lanche da tarde</span>
+            </div>
+          </li>
+          <li>
+            <svg class="icone" aria-hidden="true" focusable="false"><use href="#i-truck"/></svg>
+            <div>
+              <strong>Fácil de encontrar</strong>
+              <span>Presente em mercados de todo o Brasil</span>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+    <!-- Localização -->
+    <section class="localizacao" id="contato" aria-labelledby="titulo-localizacao">
+      <div class="conteudo">
+        <h2 class="localizacao-titulo" id="titulo-localizacao">Nossa localização</h2>
+
+        <div class="localizacao-grid">
+          <div class="mapa">
+            <img class="sede" src="imagens/sede.png" alt="Fachada do prédio da sede em Goiânia">
+            <a class="mapa-link" href="https://share.google/ZIcSNA9LpX5N752Lf" target="_blank" rel="noopener">
+              <img src="imagens/mapa.png" alt="Mapa com a localização da sede">
+              <span>Ver no Google Maps</span>
+            </a>
+          </div>
+
+          <div class="endereco">
+            <h3>Como chegar</h3>
+            <address>
+              <ul class="endereco-lista">
+                <li>
+                  <svg class="icone" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg>
+                  <div>
+                    <strong>Endereço</strong>
+                    <span>Rua Bom Jardim, 201<br>Residencial Alphaville Flamboyant</span>
+                  </div>
+                </li>
+                <li>
+                  <svg class="icone" aria-hidden="true" focusable="false"><use href="#i-home"/></svg>
+                  <div>
+                    <strong>Cidade</strong>
+                    <span>Goiânia - GO<br>CEP 74884-552</span>
+                  </div>
+                </li>
+                <li>
+                  <svg class="icone" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>
+                  <div>
+                    <strong>Telefone</strong>
+                    <span><a href="tel:08007221718">0800 722 1718</a></span>
+                  </div>
+                </li>
+              </ul>
+            </address>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
-
-  <section class="destaques">
-    <div class="conteudo">
-      <h2 class="destaques-titulo">Nossos destaques</h2>
-      <div class="destaques-grid">
-
-        <article class="card">
-          <svg class="icone card-icone"><use href="#i-droplet"/></svg>
-          <h3>Produtos variados</h3>
-          <p>Leite, iogurtes, queijos, manteiga e outros derivados para todos os momentos do dia.</p>
-        </article>
-
-        <article class="card">
-          <svg class="icone card-icone"><use href="#i-check"/></svg>
-          <h3>Qualidade</h3>
-          <p>Cuidado em cada etapa, do campo até a mesa, para entregar um produto em que a família pode confiar.</p>
-        </article>
-
-        <article class="card">
-          <svg class="icone card-icone"><use href="#i-truck"/></svg>
-          <h3>Perto de você</h3>
-          <p>Uma marca presente em mercados de todo o Brasil, fácil de encontrar na hora da compra.</p>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="chamada">
-    <div class="conteudo chamada-caixa">
-      <h2>Quer conhecer melhor a Piracanjuba?</h2>
-      <p>Veja os produtos, descubra novidades ou fale com a gente. Será um prazer atender você.</p>
-      <a href="#" class="botao-chamada">Fale conosco</a>
-    </div>
-  </section>
-
-  <section class="localizacao">
-    <div class="conteudo">
-      <h2 class="localizacao-titulo">Nossa localização</h2>
-
-      <div class="localizacao-grid">
-        <div class="mapa">
-          <img class="sede" src="imagens/sede.png" alt="Fachada do prédio da sede em Goiânia">
-          <a class="mapa-link" href="https://share.google/ZIcSNA9LpX5N752Lf" target="_blank" rel="noopener">
-            <img src="imagens/mapa.png" alt="Mapa com a localização da sede">
-            <span>Ver no Google Maps</span>
-          </a>
-        </div>
-
-        <div class="endereco">
-          <h3>Como chegar</h3>
-          <ul class="endereco-lista">
-            <li>
-              <svg class="icone"><use href="#i-pin"/></svg>
-              <div>
-                <strong>Endereço</strong>
-                <span>Rua Bom Jardim, 201<br>Residencial Alphaville Flamboyant</span>
-              </div>
-            </li>
-            <li>
-              <svg class="icone"><use href="#i-home"/></svg>
-              <div>
-                <strong>Cidade</strong>
-                <span>Goiânia - GO<br>CEP 74884-552</span>
-              </div>
-            </li>
-            <li>
-              <svg class="icone"><use href="#i-phone"/></svg>
-              <div>
-                <strong>Telefone</strong>
-                <span><a href="tel:08007221718">0800 722 1718</a></span>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <footer class="rodape">
     <div class="conteudo rodape-grid">
 
-      <section>
-        <h2>Links úteis</h2>
+      <nav aria-labelledby="titulo-links">
+        <h2 id="titulo-links">Links úteis</h2>
         <ul>
           <li><a href="#">Política de privacidade</a></li>
           <li><a href="#">Termos de uso</a></li>
-          <li><a href="#">Perguntas frequentes</a></li>
+          <li><a href="#perguntas">Perguntas frequentes</a></li>
+        </ul>
+      </nav>
+
+      <section aria-labelledby="titulo-fale">
+        <h2 id="titulo-fale">Fale conosco</h2>
+        <address>
+          <p><svg class="icone" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg><a href="mailto:contato@exemplo.com">contato@exemplo.com</a></p>
+          <p><svg class="icone" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><a href="tel:08007221718">0800 722 1718</a></p>
+        </address>
+      </section>
+
+      <section aria-labelledby="titulo-redes">
+        <h2 id="titulo-redes">Redes sociais</h2>
+        <ul class="redes">
+          <li><a href="#" aria-label="Instagram"><svg class="icone" aria-hidden="true" focusable="false"><use href="#i-instagram"/></svg></a></li>
+          <li><a href="#" aria-label="Facebook"><svg class="icone" aria-hidden="true" focusable="false"><use href="#i-facebook"/></svg></a></li>
+          <li><a href="#" aria-label="YouTube"><svg class="icone" aria-hidden="true" focusable="false"><use href="#i-youtube"/></svg></a></li>
         </ul>
       </section>
 
-      <section>
-        <h2>Fale conosco</h2>
-        <p><svg class="icone"><use href="#i-mail"/></svg>contato@exemplo.com</p>
-        <p><svg class="icone"><use href="#i-phone"/></svg>0800 722 1718</p>
-      </section>
-
-      <section>
-        <h2>Redes sociais</h2>
-        <div class="redes">
-          <a href="#" aria-label="Instagram"><svg class="icone"><use href="#i-instagram"/></svg></a>
-          <a href="#" aria-label="Facebook"><svg class="icone"><use href="#i-facebook"/></svg></a>
-          <a href="#" aria-label="YouTube"><svg class="icone"><use href="#i-youtube"/></svg></a>
-        </div>
-      </section>
-
     </div>
-    <p class="copy">Trabalho acadêmico - sem fins comerciais. Piracanjuba® é marca de seus respectivos proprietários.</p>
+    <p class="copy"><small>Trabalho acadêmico - sem fins comerciais. Piracanjuba® é marca de seus respectivos proprietários.</small></p>
   </footer>
 
 </body>

@@ -271,6 +271,149 @@ h3 {
   font-size: 16px;
   color: var(--cinza);
 }
+.cta {
+  position: relative;
+  overflow: hidden;
+  padding: 88px 0;
+  background-color: var(--azul);
+  color: #ffffff;
+}
+
+.faq {
+  padding: 72px 0;
+  background-color: var(--creme);
+}
+
+.faq-titulo {
+  margin-bottom: 40px;
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--azul);
+}
+
+.faq-titulo::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 6px;
+  margin-top: 14px;
+  background-color: var(--amarelo);
+}
+
+.faq-lista {
+  max-width: 820px;
+}
+
+.faq details {
+  margin-bottom: 14px;
+  background-color: #ffffff;
+  border: 1px solid var(--linha);
+  border-left: 8px solid var(--azul);
+}
+
+.faq details:nth-child(2) {
+  border-left-color: var(--vermelho);
+}
+
+.faq details:nth-child(3) {
+  border-left-color: var(--laranja);
+}
+
+.faq details:nth-child(4) {
+  border-left-color: var(--amarelo);
+}
+
+.faq summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 56px;
+  padding: 14px 20px;
+  font-family: var(--fonte-titulo);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--azul);
+  cursor: pointer;
+  list-style: none;
+}
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+.faq summary::after {
+  content: "+";
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  background-color: var(--azul);
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+}
+
+.faq details[open] summary::after {
+  content: "\2212";
+  background-color: var(--vermelho);
+}
+
+.faq summary:hover {
+  background-color: var(--creme);
+}
+
+.faq summary:focus-visible {
+  outline: 3px solid var(--laranja);
+  outline-offset: -3px;
+}
+
+.faq details p {
+  padding: 4px 20px 20px;
+  font-size: 17px;
+  color: var(--cinza);
+}
+
+.faq details a {
+  color: var(--azul);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+  .faq-titulo {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .faq-titulo::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .faq-lista {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .faq {
+    padding: 44px 0;
+  }
+
+  .faq-titulo {
+    margin-bottom: 28px;
+    font-size: 24px;
+  }
+
+  .faq summary {
+    padding: 12px 14px;
+    font-size: 17px;
+  }
+
+  .faq details p {
+    padding: 2px 14px 16px;
+    font-size: 16px;
+  }
+}
 
 /* Chamada para ação */
 .cta {
@@ -280,8 +423,6 @@ h3 {
   background-color: var(--azul);
   color: #ffffff;
 }
-
-/* arcos que lembram o sol da marca */
 .cta::before,
 .cta::after {
   content: "";

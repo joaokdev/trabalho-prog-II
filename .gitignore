@@ -1,3 +1,15 @@
-﻿# Segredos e configurações locais
+﻿# Configurações locais e arquivos gerados
 .env
 .env.*
+
+# Cache e arquivos temporários do sistema
+.DS_Store
+Thumbs.db
+*.log
+
+# Dependências e saída de build, caso sejam adicionadas futuramente
+node_modules/
+dist/
+
+# Preferências pessoais do editor
+.vscode/

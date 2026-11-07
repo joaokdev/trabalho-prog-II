@@ -1,20 +1,30 @@
-# Site Piracanjuba
+﻿# Site Piracanjuba
 
-Página feita para um trabalho de faculdade, seguindo um wireframe dado pelo professor. O tema escolhido foi a Piracanjuba.
+Página estática criada para um trabalho de faculdade a partir de um wireframe. O tema escolhido foi a marca Piracanjuba. O site é uma atividade acadêmica e não representa a página oficial da empresa.
 
 ## Tecnologias
 
-- HTML
-- CSS
+- HTML5
+- CSS3
 
-## Sobre o projeto
+## O que a página apresenta
 
-Responsividade:
+- Apresentação da marca e de alguns produtos.
+- Seções de destaques e perguntas frequentes.
+- Chamada para conhecer os produtos e informações de localização.
+- Layout adaptado para computador, tablet e celular.
 
-- Tablet: fontes menores, texto centralizado, imagem do corpo abaixo do texto, cards dos destaques em uma coluna e cartão da chamada abaixo do texto.
-- Localização: duas colunas (mapa e endereço) no desktop e uma coluna, um bloco abaixo do outro, a partir de 768px de largura.
-- Celular: logo do cabeçalho menor, sem as informações 1 e 2, e botão da chamada ocupando a largura da tela, com o telefone logo abaixo.
+## Como visualizar
 
-O endereço e o telefone da seção de localização são reais, e o mapa e a foto do prédio são imagens do Google Maps. O e-mail do rodapé é só de exemplo.
+Não é necessário instalar dependências. Abra o arquivo `index.html` em um navegador. Para manter imagens e estilos carregados, deixe a pasta `imagens` e o arquivo `style.css` no mesmo diretório do HTML.
 
-Referências: MDN (CSS Grid Layout) e W3Schools (CSS Grid).
+## Organização
+
+- `index.html`: conteúdo e estrutura da página.
+- `style.css`: estilos e ajustes responsivos.
+- `imagens/`: imagens usadas no site e captura de referência.
+- `branch1.html` e `branch2.html`: páginas de demonstração criadas durante o exercício de branches.
+
+## Observações
+
+O endereço e o telefone exibidos na seção de localização são informações reais; a imagem do mapa e a foto da sede vieram do Google Maps. O e-mail é apenas um exemplo. As referências consultadas para CSS Grid foram a MDN e o W3Schools.
